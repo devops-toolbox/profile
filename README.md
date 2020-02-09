@@ -8,10 +8,10 @@ profile: Profile
 Ansible galaxy:
 ---------------
 
-[https://galaxy.ansible.com/devops-toolbox.profile](https://galaxy.ansible.com/devops-toolbox.profile)
+[https://galaxy.ansible.com/devopstoolbox.profile](https://galaxy.ansible.com/devopstoolbox.profile)
 
 ```bash
-ansible-galaxy install devops-toolbox.profile
+ansible-galaxy install devopstoolbox.profile
 ```
 
 Requirements
@@ -60,7 +60,7 @@ Example Playbook
   tasks:
     - name: profile is configured
       import_role:
-        name: devops-toolbox.profile
+        name: devopstoolbox.profile
       vars:
         profile_packages_state: present
         profile_remove_packages: true
@@ -89,4 +89,4 @@ MIT
 Author Information
 ------------------
 
-- [Mihai Criveti](https://www.linkedin.com/in/devops-toolbox.)
+- [Mihai Criveti](https://www.linkedin.com/in/devopstoolbox.)
