@@ -1,0 +1,27 @@
+---
+# Install profile packages
+
+- name: unwanted packages are removed
+  package:
+    name: "{{ profile_packages_remove }}"
+    state: absent
+  become: true
+  when: profile_remove_packages
+
+- name: prereq repositories are installed
+  package:
+    name: "{{ profile_packages_repos }}"
+    state: "{{ profile_packages_state }}"
+  become: true
+
+- name: prereq packages are installed
+  package:
+    name: "{{ profile_packages_prereq }}"
+    state: "{{ profile_packages_state }}"
+  become: true
+
+- name: packages are installed
+  package:
+    name: "{{ profile_packages_install }}"
+    state: "{{ profile_packages_state }}"
+  become: true

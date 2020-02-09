@@ -1,0 +1,10 @@
+---
+# Template configuration files for profile
+
+- name: template is copied
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  become: true
+  loop: "{{ profile_templates_copy }}"
+  when: profile_copy_templates
